@@ -2,7 +2,7 @@
 layout: single
 title: ¡Hola Mundo!
 excerpt: ¡Hola Mundo! Bienvenidos.
-date: 2024-06-12
+date: 2024-07-12
 classes: wide
 header:
     teaser: /assets/images/post_thumbnails/0_Hola-Mundo.png
@@ -20,7 +20,7 @@ Esta es mi primera entrada en este Blog.
 He buscado algunas referencias para poder iniciar este blog. Al final, creo que lo mejor sera hacerlo en dos partes.
 La primera parte tengo la intención de comentarles un poco de mi.
 
->Soy un ingeniero en Telecomunicaciones con un máster en seguridad en TI, mi experiencia en los últimos 13 años ha sido prestar servicios algunos ISP de México. Hoy en día realizo, diseño, despliegue y soporte de redes a nivel nacional para un ISP.
+>Soy un ingeniero en Telecomunicaciones con un máster en seguridad en TI, mi experiencia en los últimos 10 años ha sido prestar servicios algunos ISP de México. Hoy en día realizo, diseño, despliegue y soporte de redes a nivel nacional para un ISP.
 
 Como segunda parte, me gustaría platicarles de que va este blog.
 
