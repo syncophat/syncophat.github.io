@@ -8,7 +8,7 @@ header:
     teaser: /assets/images/post_thumbnails/0_Hola-Mundo.png
     teaser_home_page: true
     icon: /assets/images/icons/syncophat.png
-categiries:
+categories:
     - Network
 tags:
     - network

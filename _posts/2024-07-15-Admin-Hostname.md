@@ -8,7 +8,7 @@ header:
     teaser: /assets/images/post_thumbnails/01_CLI.png
     teaser: true
     icon: /assets/images/icons/syncophat.png
-categiries:
+categories:
      - Network
 tags:
     - network
