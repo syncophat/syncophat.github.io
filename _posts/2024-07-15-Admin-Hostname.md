@@ -6,6 +6,14 @@ date: 2024-07-15
 classes: wide
 header:
     teaser: /assets/images/post_thumbnails/01_CLI.png
+    teaser: true
+    icon: /assets/images/icons/syncophat.png
+categiries:
+     - Network
+tags:
+    - network
+    - linux
+    - technology
 ---
 # ¿Tenemos alternativas a la hora de recordar la **IP** de cada dispositivo?
 Este post trata justamente de ese tema. Muchas veces nos hemos enfrentado a que nuestro empleador, no nos permite instalar software que no tenga una licencia y/o que no cumpla con ciertas caracteristicas. entoces esto nos deja fuera de la mano software como, ***SecureCRT, Putty, MobaXterm, Termux o Xshell7**, seguramente deje afuera muchas alternativas.
