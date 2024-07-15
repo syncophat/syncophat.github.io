@@ -86,14 +86,7 @@ sudo mv mgmt-etc-hosts.sh ~/.local/bin/mgmt-etc-hosts.sh
 mgmt-etc-hosts.sh -h
 ```
 ### Forma de uso
-|Script 		   |Argumento 									| Descripción			|
-|------------------|--------------------------------------------|-----------------------|
-|mgmt-etc-hosts.sh |-h 		  									|Panel de ayuda			| 
-|mgmt-etc-hosts.sh |-e busqueda_IP -i 192.168.100.2 			|Búsqueda por IP 		| 
-|mgmt-etc-hosts.sh |-e busqueda_IP -j SW_TEST_2 				|Búsqueda por HOSTS		|
-|mgmt-etc-hosts.sh |-a alta -b 192.168.100.2 -c SW_TEST_2		|Alta de un Hosts 		|
-|mgmt-etc-hosts.sh |-a baja -d 192.168.100.2 -f SW_TEST_2		|Baja de un Hosts 		|
-|mgmt-etc-hosts.sh |-a cambio -b IP -c hostname -d IPn -f hostN	|Cambio de nombre o IP 	|
+![](/assets/images/post_thumbnails/01_Forma_de_uso.png)
 
 ### Screenshots
 
