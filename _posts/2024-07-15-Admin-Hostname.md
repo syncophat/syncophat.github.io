@@ -16,15 +16,15 @@ tags:
     - technology
 ---
 # ¿Tenemos alternativas a la hora de recordar la **IP** de cada dispositivo?
-Este post trata justamente de ese tema. Muchas veces nos hemos enfrentado a que nuestro empleador, no nos permite instalar software que no tenga una licencia y/o que no cumpla con ciertas caracteristicas. entoces esto nos deja fuera de la mano software como, ***SecureCRT, Putty, MobaXterm, Termux o Xshell7**, seguramente deje afuera muchas alternativas.
-Para mi este fue un caso, dentro de las normar corporativas, no podemos hacer uso de software que no tuviera una licencia y/o que no cumpliera con esos requerimientos.
-Elgo complicado cuando estas acostumbrado a usar ciertas aplicaciones. Pero al final encontre una forma de hacerlo comodo, simple y sin gastar.
-En mi caso, siendo usuario de Linux, fue utilizar las herramientas existentes, basicamente SSH (Openssh), telnet, sshpass, y un script que cree para aprovechar el archivo **/etc/hosts**
+Este post trata justamente de ese tema. Muchas veces nos hemos enfrentado a que nuestro empleador, no nos permite instalar software que no tenga una licencia y/o que no cumpla con ciertas características. Entonces esto nos deja fuera de la mano software como, ***SecureCRT, Putty, MobaXterm, Termux o Xshell7**, seguramente deje afuera muchas alternativas.
+Para mi este fue un caso, dentro de las normas corporativas, no podemos hacer uso de software que no tuviera una licencia y/o que no cumpliera con esos requerimientos.
+Esto complicado cuando estas acostumbrado a usar ciertas aplicaciones. Pero al final encontré una forma de hacerlo cómodo, simple y sin gastar.
+En mi caso, siendo usuario de Linux, fue utilizar las herramientas existentes, básicamente SSH (Openssh), telnet, sshpass, y un script que cree para aprovechar el archivo **/etc/hosts**
 
 Vallamos al inicio de este entorno de trabajo.
 ## Preparativos para el entorno de trabajo.
-No entrare en detalle de como instalar paquetes, eso dependera de cada usario y de cada distribución.
-Pero seria facilmente aplicable para entornos basados en Linux y basados en Unix.
+No entrare en detalle de como instalar paquetes, eso dependerá de cada usuario y de cada distribución.
+Pero seria fácilmente aplicable para entornos basados en Linux y basados en Unix.
 
 ### Archivo ssh_config
 El primer paso seria estructurar el archivo ssh_config. Aunque mucha gente no lo hace, creo que es una herramienta poderosa si se sabe usar.
@@ -41,17 +41,17 @@ HostKeyAlgorithms ssh-ed25519,ssh-rsa,ssh-ed25519,ssh-ed25519-cert-v01@openssh.c
 #Todos los hosts KexAlgorithms
 KexAlgorithms diffie-hellman-group1-sha1,diffie-hellman-group14-sha1,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,curve25519-sha256,curve25519-sha256@libssh.org,sntrup761x25519-sha512@openssh.com
 ```
-Estos cambios, nos ayudaran a no tener provemas con los diferentes vendors, por ejemplo cisco con sus algoritmos **diffie-hellman**, basicamente estamos preparando a ssh para poder trabajar con lo que se le pida.
+Estos cambios, nos ayudaran a no tener problemas con los diferentes vendors, por ejemplo cisco con sus algoritmos **diffie-hellman**, básicamente estamos preparando a ssh para poder trabajar con lo que se le pida.
 
 La siguiente parte es a consideración de cada uno.
-dentro de las caracteristicas del archivo ssh_config, nos permite jugar con perfires, por ejemplo, si tus dispositivos existen en un loque de ips (publicas o privadas), puedes crear un perfir de esa manera, pongamos un ejemplo.
+dentro de las características del archivo ssh_config, nos permite jugar con perfiles, por ejemplo, si tus dispositivos existen en un bloque de IP's (publicas o privadas), puedes crear un perfil de esa manera, pongamos un ejemplo.
 ```
 Host 192.168.30.*
     User usuario_local_1
 ```
->Esta configuración, nos dice que todas las IP's del segmento 192.168.30.0/24, tendran el **usuario_local_1** ya definido, por lo que a la hora de ejecutar el comando solo habria que incluir la IP. "ssh 192.168.30.20"
+>Esta configuración, nos dice que todas las IP's del segmento 192.168.30.0/24, tendrán el **usuario_local_1** ya definido, por lo que a la hora de ejecutar el comando solo habría que incluir la IP. "ssh 192.168.30.20"
 
-En Caso de que los dispositivos que busques administrar, tienen nomenclaturas definisas, como por ejemplo P,PE,BR,CE,RR,N,H,SW,etc. puedes definirlo en este momento.
+En Caso de que los dispositivos que busques administrar, tienen nomenclaturas definidas, como por ejemplo P,PE,BR,CE,RR,N,H,SW,etc. puedes definirlo en este momento.
 ```
 Host SW_*
     User usuario_1 
@@ -60,7 +60,7 @@ Host SW_*
 ¿Alguna vez has pensado en que grandioso seria que los dispositivos tuvieran un DNS o similar?
 Este archivo, nos permite hacer eso, crear una relación entre un dominio y una IP.
 
-En base a ese consepto vamos a ingresar en este archivo esa relación.
+En base a ese concepto vamos a ingresar en este archivo esa relación.
 
 ```
 192.168.30.20 SW_CISCO_1
